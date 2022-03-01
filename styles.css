@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    background-color: darkgray;
+}
+.board{
+    display: flex;
+    flex-wrap: wrap;
+    height: 360px;
+    width: 360px;
+    
+}
+.cell{
+    display: flex;
+    font-family: Arial;
+    font-size: 3rem;
+    font-weight: 300;
+    flex-basis:120px;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.board > .cell:nth-child(3n+2){
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+}
+.board >.cell:nth-child(n+4){
+    border-top: 5px solid white;
+}

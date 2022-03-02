@@ -1,12 +1,53 @@
 * {
     box-sizing: border-box;
-    background-color: darkgray;
+    
+}
+/* Header */
+header{
+    background-color: gray;
+    color: white;
+    font-family: Arial;
+    font-size: 1.5rem;
+    flex-direction: column;
+    width: 100%;
+}
+#title{
+    text-align: center;
+}
+#playerSelect{
+    text-align: center;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+#one-player{
+    margin-left: .75rem;
+    margin-right: 0.7rem;
+}
+#two-player{
+    margin-left: 0.6rem;
+    margin-right: 0.7rem;
+    padding-left: .5rem;
+    padding-right: 0.5rem;
+}
+#reset{
+    margin-left: 0.6rem;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
 }
 .board{
     display: flex;
     flex-wrap: wrap;
     height: 360px;
     width: 360px;
+    margin-top: 4rem;
     
 }
 .cell{
@@ -20,8 +61,12 @@
 }
 body{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    background-color: darkgray;
+    margin: 0px;
 }
 .board > .cell:nth-child(3n+2){
     border-left: 5px solid white;

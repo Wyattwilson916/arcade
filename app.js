@@ -1,30 +1,65 @@
-// As users playing a two player game we want to:
+// Select how many players
+// 1 or two?
 
+// function numberOfPlayers(){
+//     const players =     
+    
+// }
+const gameStatus = document.createElement('p')
+const board = document.querySelector('.board')
+const button1 = document.getElementById('one-player')
+const button2 = document.getElementById('two-player')
+const cellPlay = document.getElementsByClassName('cell')
+const resetButton = document.getElementById('reset')
 
-// enter our names and have them displayed
+let gameState = {
+    gameStatus: 'Player Select',
+    //set players to none
+    //clear board
+}
 
-// have our order chosen for us by the game
+board.addEventListener('click', function () {
+    console.log('Cell has been clicked')
+})
 
-// take turns placing our marks in empty spaces
+gameStatus.classList.add('status')
+board.appendChild(gameStatus)
+gameStatus.innerText = gameState.gameStatus
 
-// not be able to place our marks in an occupied space
+function playerSelect(event){
 
-// be told when a move causes a player to win, or to draw
+}
 
-// start the game over without having to reset the browser
+button1.addEventListener('click', function () { 
+    console.log('button 1 clicked')
+})
 
+button2.addEventListener('click', function (){
+    console.log('button 2 clicked')
+})
 
-// As a user playing a one player game I want to:
+function resetGame(){
+    gameState = {
+        gameStatus: 'Player Select'
+    }
+}
+resetButton.addEventListener('click', function() {
+    console.log('Reset Button Pressed')
+    resetGame()
+})
 
+// Get names or name
+// Display Choose number
+// Have user(s) input name(s)
 
-// see the name 'Computer' displayed as my opponent
+// Start game
+// Display names or name and computer
+//* Display game board
+// Randomly decide which player starts
+// Assign starting player "X"
 
-// have the Computer player make moves as if it were a human player with the correct mark in an empty space
-
-
-// As a user playing a single player game I would be delighted to:
-
-
-// have the Computer make 'better-than-guessing' choices when placing a mark on the board
-
-// set the board size myself ("wider" or "taller" than 3x3)
+// No overlap, take turns
+// Make computer play in open spots (bonus if its good)
+// Display winner or draw
+// Restart? 
+// Make board size adjustable

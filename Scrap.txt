@@ -1,0 +1,167 @@
+// Select how many players
+// 1 or two?
+
+// function numberOfPlayers(){
+//     const players =     
+    
+// }
+// const gameStatus = document.createElement('p')
+// const board = document.querySelector('.board')
+// const button1 = document.getElementById('one-player')
+// const button2 = document.getElementById('two-player')
+const cells = Array.from(document.getElementsByClassName('cell'))
+const boxes = [null, null, null, null, null, null, null, null, null,]
+const O = 'O'
+const X = 'X'
+let startingPlayer = X
+
+// const resetButton = document.getElementById('reset')
+// let gameStatus = ''
+let gameState = {
+    gameStatus: 'Player Select',
+
+    //set players to none
+    //clear board
+}
+// gameStatus.classList.add('status')
+// board.appendChild(gameStatus)
+// gameStatus.innerText = gameState.gameStatus
+
+function cellClicked(cellNum){
+
+cells.forEach((cell, index) => {
+
+    cells.addEventListener('click', cellClicked)
+    const id = cellNum.target.id
+    console.log(id)
+    })
+}
+
+
+
+// function game(event){
+//     if(cell1 == 'X' && cell2 == 'X' && cell3 == 'X'){
+//         //display 'player X winner'
+//     }
+// }
+
+
+
+// function playerSelect(event){
+
+// }
+
+// button1.addEventListener('click', function () { 
+//     console.log('button 1 clicked')
+// })
+
+// button2.addEventListener('click', function (){
+//     console.log('button 2 clicked')
+// })
+
+// function resetGame(){
+//     gameState = {
+//         gameStatus: 'Player Select'
+//     }
+// }
+// resetButton.addEventListener('click', function() {
+//     console.log('Reset Button Pressed')
+//     resetGame()
+// })
+
+// Get names or name
+// Display Choose number of players
+// Have user(s) input name(s)
+
+// Start game
+// Display names or name and computer
+//* Display game board
+// Randomly decide which player starts
+// Assign starting player "X"
+
+// No overlap, take turns
+// Make computer play in open spots (bonus if its good)
+// Display winner or draw
+// Restart? 
+// Make board size adjustable
+
+const board = document.getElementById("#board");
+const cells = Array.from(document.getElementsByClassName(".cell"));
+const restart = document.getElementById("reset");
+const playText = document.getElementById("playText");
+const boxes = [null, null, null, null, null, null, null, null, null];
+const O = "O";
+const X = "X";
+let currentPlayer = O;
+
+const drawBoard = () => {
+  cells.forEach((cell, index) => {
+    
+    cell.addEventListener("click", cellClicked);
+  });
+};
+
+function cellClicked(e) {
+  const id = e.target.id;
+  if (!boxes[id]) {
+//     boxes[id] = currentPlayer;
+//     e.target.innerText = currentPlayer;
+//     if (hasPlayerWon(currentPlayer)) {
+//       playText.innerHTML = `${currentPlayer} wins!!`;
+//       return;
+//     }
+//     currentPlayer = currentPlayer === O ? X : O;
+  }
+}
+
+// const hasPlayerWon = (player) => {
+//   //from top left, check across, down, and diagonal
+//   if (boxes[0] === player) {
+//     if (boxes[1] === player && boxes[2] === player) {
+//       console.log(`${player} wins up top`);
+//       return true;
+//     }
+//     if (boxes[3] === player && boxes[6] === player) {
+//       console.log(`${player} wins on the left`);
+//       return true;
+//     }
+//     if (boxes[4] === player && boxes[8] === player) {
+//       console.log(`${player} wins on the diagonal`);
+//       return true;
+//     }
+//   }
+//   //from bottom check up and across
+//   if (boxes[8] === player) {
+//     if (boxes[2] === player && boxes[5] === player) {
+//       console.log(`${player} wins on the right`);
+//       return true;
+//     }
+//     if (boxes[7] === player && boxes[6] === player) {
+//       console.log(`${player} wins on the bottom`);
+//       return true;
+//     }
+//   }
+//   //from middle check middle vertical and middle horizontal
+//   if (boxes[4] === player) {
+//     if (boxes[3] === player && boxes[5] === player) {
+//       console.log(`${player} wins on the middle horizontal`);
+//       return true;
+//     }
+//     if (boxes[1] === player && boxes[7] === player) {
+//       console.log(`${player} wins on the middle vertical`);
+//       return true;
+//     }
+//   }
+// };
+
+restart.addEventListener("click", () => {
+  boxes.forEach((space, index) => {
+    boxes[index] = null;
+  });
+  cells.forEach((cell) => {
+    cell.innerText = "";
+  });
+  playText.innerHTML = `Let's Play!!`;
+
+  currentPlayer = O;
+});

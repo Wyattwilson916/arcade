@@ -36,13 +36,12 @@ header{
 #reset{
     margin-left: 0.6rem;
 }
-
 main{
     display: flex;
     flex-direction: row;
     flex: 1;
 }
-.board{
+#board{
     display: flex;
     flex-wrap: wrap;
     height: 360px;
@@ -53,7 +52,7 @@ main{
 .cell{
     display: flex;
     font-family: Arial;
-    font-size: 3rem;
+    font-size: 18px;
     font-weight: 300;
     flex-basis:120px;
     align-items: center;
@@ -68,10 +67,10 @@ body{
     background-color: darkgray;
     margin: 0px;
 }
-.board > .cell:nth-child(3n+2){
+#board > .cell:nth-child(3n+2){
     border-left: 5px solid white;
     border-right: 5px solid white;
 }
-.board >.cell:nth-child(n+4){
+#board >.cell:nth-child(n+4){
     border-top: 5px solid white;
 }

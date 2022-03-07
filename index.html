@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css">
     <title>Tic Tac Toe</title>
-    <script defer src="app.js"></script>
   </head>
   <header>
       <h1 id="title">
@@ -18,23 +17,28 @@
       <div class="buttons">
         <button id='one-player'>One Player</button>
         <button id='two-player'>Two Player</button>
-        <button id='reset'>Reset Game</button>
+        
       </div>
   </header>
   <body>
-    <p>
+    <div class="container">
+        <div id="board">
+            <div class="cell" id="0"></div>
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+            <div class="cell" id="7"></div>
+            <div class="cell" id="8"></div>
+        </div>
         
-    </p>
-    <div class="board">
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
-      <div class="cell"><span></span></div>
     </div>
+    
   </body>
+  <script src="app.js"></script>
+  <footer>
+    <button id='reset'>Restart</button>
+  </footer>
 </html> 
